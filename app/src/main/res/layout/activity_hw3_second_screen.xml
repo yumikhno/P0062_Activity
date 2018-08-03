@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HW3SecondScreenActivity">
+
+    <TextView
+        android:id="@+id/labelTextViewFromFirstScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textViewFromFirstScreen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:text="Text from first screen" />
+
+    <TextView
+        android:id="@+id/textViewFromFirstScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/labelTextViewFromFirstScreen"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/labelTextViewFromThirdScreen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="@dimen/default_margin"/>
+
+    <TextView
+        android:id="@+id/labelTextViewFromThirdScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textViewFromFirstScreen"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textViewFromThirdScreen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:text="Text from third screen"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textViewFromThirdScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Where's text?"
+        app:layout_constraintTop_toBottomOf="@id/labelTextViewFromThirdScreen"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonToThirdScreen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/buttonToThirdScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To third screen"
+        app:layout_constraintTop_toBottomOf="@id/textViewFromThirdScreen"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
